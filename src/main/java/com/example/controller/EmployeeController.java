@@ -50,6 +50,11 @@ public class EmployeeController {
         return "employee/detail";
     }
 
+    /**
+     * 扶養の人数更新.
+     * @param form フォーム
+     * @return 変更後の従業員リスト
+     */
     @PostMapping("/update")
     public String update(UpdateEmployeeForm form){
 
