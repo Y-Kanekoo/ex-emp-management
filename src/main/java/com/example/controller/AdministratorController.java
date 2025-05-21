@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 /**
- * 管理者情報を操作するコントローラー
+ * 管理者情報を操作するコントローラー.
  *
  */
 @Controller
