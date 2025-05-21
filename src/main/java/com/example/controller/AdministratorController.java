@@ -96,11 +96,16 @@ public class AdministratorController {
         return "redirect:/employee/showList";
     }
 
+    /**
+     * ログアウト機能
+     *
+     * @return ログイン画面
+     */
     @GetMapping("/logout")
-    public String logout(LoginForm form){
+    public String logout(){
 
         session.invalidate();
 
-        return "redirect:/login";
+        return "redirect:/";
     }
 }

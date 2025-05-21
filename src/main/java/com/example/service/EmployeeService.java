@@ -36,6 +36,11 @@ public class EmployeeService {
         return employeeRepository.findById(id);
     }
 
+    /**
+     * 従業員情報更新
+     *
+     * @param employee　従業員
+     */
     public void update(Employee employee){
 
         employeeRepository.update(employee);
