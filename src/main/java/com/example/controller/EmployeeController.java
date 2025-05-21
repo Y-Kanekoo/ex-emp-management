@@ -30,5 +30,6 @@ public class EmployeeController {
         return "employee/list";
     }
 
+    @GetMapping
 
 }
