@@ -50,10 +50,12 @@ public class EmployeeController {
         return "employee/detail";
     }
 
-//    @PostMapping("/update")
-//    public String update(){
-//
-//        Employee employee = employeeService.showDetail(id);
-//    }
+    @PostMapping("/update")
+    public String update(UpdateEmployeeForm form){
+
+        int id = Integer.parseInt(form.getId());
+        Employee employee = employeeService.showDetail(id);
+        return "employee/showList";
+    }
 
 }
