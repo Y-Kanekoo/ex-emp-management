@@ -87,6 +87,29 @@
           <!-- ここから上を編集する必要はありません -->
 
           <!-- ここにモックのtable要素を貼り付けます -->
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>従業員名</th>
+                <th>入社日</th>
+                <th>扶養人数</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr th:each="employee : ${employeeList}">
+                <td th:text="${employee.name}">山田太郎</td>
+                <td th:text="${#dates.format(employee.hireDate, 'yyyy-MM-dd')}">
+                  2018-05-13
+                </td>
+                <td th:text="${employee.dependentsCount}">3</td>
+              </tr>
+              <tr th:if="${#lists.isEmpty(employeeList)}">
+                <td colspan="3" class="text-center">
+                  該当する従業員情報はありません。
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
           <!-- ここから下を編集する必要はありません -->
         </div>

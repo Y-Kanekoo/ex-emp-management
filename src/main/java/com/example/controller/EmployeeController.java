@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * 管理者関連機能の処理の制御を行うコントローラー.
+ * 管理者関連機能.
  */
 @Controller
 @RequestMapping("/employee")
@@ -18,9 +18,9 @@ public class EmployeeController {
     private EmployeeService employeeService;
 
     /**
-     * 従業員一覧を格納する.
+     * 従業員一覧を.表示します.
      * @param model モデル
-     * @return 従業員一覧を出力
+     * @return 従業員一覧画面
      */
     @GetMapping("/showList")
     public String showList(Model model){
