@@ -1,6 +1,5 @@
 package com.example.form;
 
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 
 public class UpdateEmployeeForm {

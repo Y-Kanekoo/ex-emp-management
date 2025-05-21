@@ -103,7 +103,6 @@
                     th:href="@{/employee/showDetail?id=} + ${employee.id}"
                     th:text="${employee.name}"
                     >山田太郎</a>
-                  >
                 </td>
                 <td th:text="${#dates.format(employee.hireDate, 'yyyy-MM-dd')}">
                   2018-05-13
