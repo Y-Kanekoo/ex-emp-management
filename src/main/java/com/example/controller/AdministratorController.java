@@ -77,6 +77,13 @@ public class AdministratorController {
         return "administrator/login";
     }
 
+    /**
+     * ログイン画面表示している.
+     *
+     * @param form フォーム
+     * @param model モデル
+     * @return ログイン画面
+     */
     @PostMapping("/login")
     public String login(LoginForm form, Model model){
         Administrator administrator = administratorService.login(form.getMailAddress(), form.getPassword());
@@ -89,5 +96,11 @@ public class AdministratorController {
         return "redirect:/employee/showList";
     }
 
+    @GetMapping("/logout")
+    public String logout(LoginForm form){
 
+        session.invalidate();
+
+        return "redirect:/login";
+    }
 }
