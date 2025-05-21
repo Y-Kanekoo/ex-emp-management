@@ -97,7 +97,11 @@
             </thead>
             <tbody>
               <tr th:each="employee : ${employeeList}">
-                <td th:text="${employee.name}">山田太郎</td>
+                <td>
+                  <a href="@{/employee/detail}" th:text="${employee.name}"
+                    >山田太郎</a
+                  >
+                </td>
                 <td th:text="${#dates.format(employee.hireDate, 'yyyy-MM-dd')}">
                   2018-05-13
                 </td>
