@@ -35,4 +35,9 @@ public class EmployeeService {
 
         return employeeRepository.findById(id);
     }
+
+    public void update(Employee employee){
+
+        employeeRepository.update(employee);
+    }
 }

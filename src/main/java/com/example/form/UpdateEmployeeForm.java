@@ -1,9 +1,13 @@
 package com.example.form;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+
 public class UpdateEmployeeForm {
     /**従業員ID*/
     private String id;
     /**扶養人数*/
+    @Pattern(regexp = "^[0-9]{2}$", message = "扶養人数を数字で入力してください")
     private String dependentsCount;
 
     public String getId() {

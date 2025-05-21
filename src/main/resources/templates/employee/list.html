@@ -98,10 +98,11 @@
             <tbody>
               <tr th:each="employee : ${employeeList}">
                 <td>
+                  <!-- th:href="@{'/employee/detail?id=' + ${employee.id}}" -->
                   <a
-                    href="@{/employee/detail/{id}(id=${employee.id})}"
+                    th:href="@{/employee/showDetail?id=} + ${employee.id}"
                     th:text="${employee.name}"
-                    >山田太郎</a
+                    >山田太郎</a>
                   >
                 </td>
                 <td th:text="${#dates.format(employee.hireDate, 'yyyy-MM-dd')}">
